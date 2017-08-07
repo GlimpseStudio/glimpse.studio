@@ -1,0 +1,20 @@
+{
+  "name": "glimpse",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "styled-components": "^2.0.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && aws s3 sync build/ s3://glimpse.studio --region eu-west-2"
+  }
+}
