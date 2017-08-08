@@ -1,14 +1,14 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-import Logo from '../assets/logo-raster.png';
+import Logo from 'assets/logo-raster.png';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  width: 100%;
 `;
 
 const LogoContainer = styled.div`
