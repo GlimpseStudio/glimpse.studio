@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "normalize.css": "^7.0.0",
+    "polished": "^1.4.0",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -17,6 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && aws s3 sync build/ s3://glimpse.studio --region eu-west-2 --delete && aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id E1MS5DXJS7N7DC --paths /index.html"
+    "deploy": "npm run build && aws s3 sync build/ s3://glimpse.studio --region eu-west-2 --delete && aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id E1MS5DXJS7N7DC --paths /index.html",
+    "deploy:preview": "npm run build && aws s3 sync build/ s3://preview.glimpse.studio --region eu-west-2 --delete && aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id EAJT0EPE32P0I --paths /index.html"
   }
 }
