@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import { media } from 'utilities/css';
+
 import Logo from 'assets/logo.png';
 import Wrapper from 'components/Wrapper';
 
@@ -18,7 +20,11 @@ const LogoContainer = styled(Link)`
 
   img {
     display: block;
-    height: 140px;
+    height: 100px;
+
+    ${media.tablet`
+      height: 140px;
+    `}
   }
 `;
 

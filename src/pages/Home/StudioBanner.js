@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { rgba } from 'polished';
 
 import { media } from 'utilities/css';
 import { grey5, grey6 }  from 'utilities/colors';
@@ -17,11 +18,12 @@ const Container = styled.div`
 `;
 
 const Banner = Wrapper.extend`
+  flex-direction: column;
   width: 100%;
-  min-height: 360px;
 
   ${media.tablet`
     flex-direction: row;
+    min-height: 360px;
   `}
 `;
 
@@ -30,11 +32,15 @@ const Contents = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   padding: 2em;
   background: white;
-  box-shadow: 0 1px 3px ${grey5};
+  box-shadow: 0 0 20px ${rgba(grey5, .2)};
   z-index: 10;
+
+  ${media.tablet`
+    flex: 1 1 auto;
+  `}
 
   h2 {
     margin-top: 0;
@@ -48,9 +54,10 @@ const Contents = styled.div`
 const Gallery = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex: 0 0 50%;
+  flex-direction: column;
+  flex: 1 0 auto;
   background: ${grey5};
-  box-shadow: 0 1px 3px ${grey5};
+  box-shadow: 0 0 20px ${rgba(grey5, .2)};
 
   ${media.tablet`
     flex: 0 0 30%;
@@ -61,15 +68,19 @@ const Gallery = styled.div`
 const Image = styled.div`
   flex: 1 0 auto;
   width: 100%;
-  height: 50%;
+  height: 120px;
   background: url(${props => props.src});
   background-size: cover;
   background-position: center;
+
+  ${media.tablet`
+    height: auto;
+  `}
 `;
 
 const StudioBanner = () => (
   <Container>
-    <Banner column>
+    <Banner>
       <Contents>
         <div>
           <h2>London VR Studio & Workspace</h2>

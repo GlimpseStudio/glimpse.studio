@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { rgba } from 'polished';
 
-import { grey7, maroon } from 'utilities/colors';
+import { grey5, maroon, blue } from 'utilities/colors';
 import { media } from 'utilities/css';
 
 import Button from 'components/Button';
@@ -23,7 +24,8 @@ const Banner = styled.div`
   margin: 0;
   padding: 2em;
   color: white;
-  background: ${grey7};
+  background: linear-gradient(225deg, ${blue}, ${maroon});
+  box-shadow: 0 0 20px ${rgba(grey5, .2)};
 `;
 
 const About = styled.div`

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
-import { textColor, grey3 } from 'utilities/colors';
+import { textColor, grey2 } from 'utilities/colors';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
@@ -14,7 +14,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background: ${grey3};
+  background: ${grey2};
   color: ${textColor};
 `;
 
