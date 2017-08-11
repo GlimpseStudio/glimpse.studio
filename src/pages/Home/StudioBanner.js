@@ -94,7 +94,7 @@ const StudioBanner = () => (
           </p>
         </div>
         <div>
-          <Button href='https://medium.com'>Learn More</Button>
+          <Button href='https://medium.com/glimpse-studio/launching-a-new-home-for-vr-ar-in-londons-olympic-park-9a25c538d0e8'>Learn More</Button>
         </div>
       </Contents>
       <Gallery>
